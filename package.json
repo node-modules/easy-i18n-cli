@@ -39,6 +39,8 @@
   },
   "scripts": {
     "test": "nyc --reporter=lcov --reporter=text mocha",
+    "test:coverage": "nyc --reporter=lcov --reporter=text --reporter=html mocha",
+    "test:check-coverage": "nyc check-coverage --lines 100 --branches 100 --functions 100 --statements 100",
     "lint": "eslint . --fix",
     "contributor": "git-contributor"
   },
@@ -46,6 +48,19 @@
     "hooks": {
       "pre-commit": "npm run lint"
     }
+  },
+  "nyc": {
+    "check-coverage": true,
+    "lines": 100,
+    "statements": 100,
+    "functions": 100,
+    "branches": 100,
+    "exclude": [
+      "test/**",
+      "coverage/**",
+      ".nyc_output/**",
+      "**/*.config.js"
+    ]
   },
   "license": "MIT"
 }
