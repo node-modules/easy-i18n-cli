@@ -59,6 +59,27 @@ export const __i18n = locale({
 $ ./bin/easy-i18n-cli.js -c ./google-translate.config.js
 ```
 
+## Testing
+
+This project has comprehensive test coverage with **100% code coverage** across all metrics.
+
+### Run tests
+```bash
+npm test
+```
+
+### Run tests with HTML coverage report
+```bash
+npm run test:coverage
+```
+
+### Check coverage thresholds
+```bash
+npm run test:check-coverage
+```
+
+For detailed testing documentation, see [TEST_DOCUMENTATION.md](./TEST_DOCUMENTATION.md).
+
 <!-- GITCONTRIBUTOR_START -->
 
 ## Contributors
